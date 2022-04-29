@@ -25,7 +25,7 @@ class ProductAbstractListTermToProductAbstractListTypeExecutor implements Conten
         );
 
         $contentProductAbstractListTypeTransfer = new ContentProductAbstractListTypeTransfer();
-        $contentProductAbstractListTypeTransfer->setIdProductAbstracts($contentProductAbstractListTermTransfer->getIdProductAbstracts());
+        $contentProductAbstractListTypeTransfer->fromArray($contentProductAbstractListTermTransfer->toArray());
 
         return $contentProductAbstractListTypeTransfer;
     }
