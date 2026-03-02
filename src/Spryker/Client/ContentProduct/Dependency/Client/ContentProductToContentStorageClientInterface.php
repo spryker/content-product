@@ -11,12 +11,6 @@ use Generated\Shared\Transfer\ContentTypeContextTransfer;
 
 interface ContentProductToContentStorageClientInterface
 {
-    /**
-     * @param string $contentKey
-     * @param string $localeName
-     *
-     * @return \Generated\Shared\Transfer\ContentTypeContextTransfer|null
-     */
     public function findContentTypeContextByKey(string $contentKey, string $localeName): ?ContentTypeContextTransfer;
 
     /**

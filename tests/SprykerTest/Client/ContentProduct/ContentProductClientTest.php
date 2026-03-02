@@ -58,9 +58,6 @@ class ContentProductClientTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testFindContentProductValidTransfer(): void
     {
         // Arrange
@@ -80,9 +77,6 @@ class ContentProductClientTest extends Unit
         $this->assertSame(ContentProductAbstractListTypeTransfer::class, get_class($systemUnderTest));
     }
 
-    /**
-     * @return void
-     */
     public function testFindContentItemWithWrongTermThrowsException(): void
     {
         // Arrange
@@ -101,9 +95,6 @@ class ContentProductClientTest extends Unit
         $this->createContentProductClient()->executeProductAbstractListTypeByKey(static::CONTENT_KEY, static::LOCALE);
     }
 
-    /**
-     * @return void
-     */
     public function testFindNotExistingContentProduct(): void
     {
         // Arrange
@@ -117,11 +108,6 @@ class ContentProductClientTest extends Unit
         $this->assertNull($systemUnderTest);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer|null $contentTypeContextTransfer
-     *
-     * @return void
-     */
     protected function setProductStorageClientReturn(?ContentTypeContextTransfer $contentTypeContextTransfer): void
     {
         $contentProductToContentStorageClientBridge = $this->getMockBuilder(ContentProductToContentStorageClientInterface::class)->getMock();
@@ -129,9 +115,6 @@ class ContentProductClientTest extends Unit
         $this->tester->setDependency(ContentProductDependencyProvider::CLIENT_CONTENT_STORAGE, $contentProductToContentStorageClientBridge);
     }
 
-    /**
-     * @return \Spryker\Client\ContentProduct\ContentProductClientInterface
-     */
     protected function createContentProductClient(): ContentProductClientInterface
     {
         return new ContentProductClient();

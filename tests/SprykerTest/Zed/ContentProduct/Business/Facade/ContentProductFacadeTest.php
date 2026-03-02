@@ -31,9 +31,6 @@ class ContentProductFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testValidateContentProductAbstractListTermIsSuccessful(): void
     {
         $products = range(1, $this->getConfig()->getMaxProductsInProductAbstractList());
@@ -48,9 +45,6 @@ class ContentProductFacadeTest extends Unit
         $this->assertCount(0, $contentValidationResponseTransfer->getParameterMessages());
     }
 
-    /**
-     * @return void
-     */
     public function testValidateContentProductAbstractListTermNumberOfProductsFail(): void
     {
         $products = range(1, $this->getConfig()->getMaxProductsInProductAbstractList() + 1);
@@ -68,9 +62,6 @@ class ContentProductFacadeTest extends Unit
         $this->assertSame($parameter, ContentProductAbstractListTermTransfer::ID_PRODUCT_ABSTRACTS);
     }
 
-    /**
-     * @return \Spryker\Zed\ContentProduct\ContentProductConfig
-     */
     protected function getConfig(): ContentProductConfig
     {
         return new ContentProductConfig();

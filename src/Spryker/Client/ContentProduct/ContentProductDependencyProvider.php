@@ -18,11 +18,6 @@ class ContentProductDependencyProvider extends AbstractDependencyProvider
      */
     public const CLIENT_CONTENT_STORAGE = 'CLIENT_CONTENT_STORAGE';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -32,11 +27,6 @@ class ContentProductDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addContentStorage(Container $container): Container
     {
         $container->set(static::CLIENT_CONTENT_STORAGE, function (Container $container) {

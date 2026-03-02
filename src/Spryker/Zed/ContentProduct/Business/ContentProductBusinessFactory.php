@@ -16,9 +16,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class ContentProductBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ContentProduct\Business\Validator\ContentProductAbstractListValidatorInterface
-     */
     public function createContentProductAbstractListValidator(): ContentProductAbstractListValidatorInterface
     {
         return new ContentProductAbstractListValidator($this->getConfig());

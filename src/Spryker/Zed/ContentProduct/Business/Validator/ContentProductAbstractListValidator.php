@@ -30,19 +30,11 @@ class ContentProductAbstractListValidator implements ContentProductAbstractListV
      */
     protected $config;
 
-    /**
-     * @param \Spryker\Zed\ContentProduct\ContentProductConfig $config
-     */
     public function __construct(ContentProductConfig $config)
     {
         $this->config = $config;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ContentProductAbstractListTermTransfer $contentProductAbstractListTermTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentValidationResponseTransfer
-     */
     public function validate(
         ContentProductAbstractListTermTransfer $contentProductAbstractListTermTransfer
     ): ContentValidationResponseTransfer {
@@ -59,11 +51,6 @@ class ContentProductAbstractListValidator implements ContentProductAbstractListV
         return $contentValidationResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ContentProductAbstractListTermTransfer $contentProductAbstractListTermTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentParameterMessageTransfer
-     */
     protected function validateNumberOfProductsConstraint(
         ContentProductAbstractListTermTransfer $contentProductAbstractListTermTransfer
     ): ContentParameterMessageTransfer {

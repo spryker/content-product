@@ -24,12 +24,6 @@ class ContentProductToContentStorageClientBridge implements ContentProductToCont
         $this->contentStorageClient = $contentStorageClient;
     }
 
-    /**
-     * @param string $contentKey
-     * @param string $localeName
-     *
-     * @return \Generated\Shared\Transfer\ContentTypeContextTransfer|null
-     */
     public function findContentTypeContextByKey(string $contentKey, string $localeName): ?ContentTypeContextTransfer
     {
         return $this->contentStorageClient->findContentTypeContextByKey($contentKey, $localeName);

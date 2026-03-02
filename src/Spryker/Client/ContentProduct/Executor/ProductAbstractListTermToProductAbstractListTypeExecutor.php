@@ -13,11 +13,6 @@ use Generated\Shared\Transfer\ContentTypeContextTransfer;
 
 class ProductAbstractListTermToProductAbstractListTypeExecutor implements ContentProductTermExecutorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer $contentTypeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentProductAbstractListTypeTransfer
-     */
     public function execute(ContentTypeContextTransfer $contentTypeContextTransfer): ContentProductAbstractListTypeTransfer
     {
         $contentProductAbstractListTermTransfer = $this->mapContentTypeContextTransferToContentProductAbstractListTermTransfer(
@@ -30,11 +25,6 @@ class ProductAbstractListTermToProductAbstractListTypeExecutor implements Conten
         return $contentProductAbstractListTypeTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer $contentTypeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentProductAbstractListTermTransfer
-     */
     protected function mapContentTypeContextTransferToContentProductAbstractListTermTransfer(
         ContentTypeContextTransfer $contentTypeContextTransfer
     ): ContentProductAbstractListTermTransfer {

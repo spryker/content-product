@@ -20,9 +20,6 @@ use Spryker\Shared\ContentProduct\ContentProductConfig;
  */
 class ContentProductFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\ContentProduct\Mapper\ContentProductAbstractListTypeMapperInterface
-     */
     public function createContentProductAbstractListTypeMapper(): ContentProductAbstractListTypeMapperInterface
     {
         return new ContentProductAbstractListTypeMapper(
@@ -41,17 +38,11 @@ class ContentProductFactory extends AbstractFactory
         ];
     }
 
-    /**
-     * @return \Spryker\Client\ContentProduct\Executor\ContentProductTermExecutorInterface
-     */
     public function createProductAbstractListTermToProductAbstractListTypeExecutor(): ContentProductTermExecutorInterface
     {
         return new ProductAbstractListTermToProductAbstractListTypeExecutor();
     }
 
-    /**
-     * @return \Spryker\Client\ContentProduct\Dependency\Client\ContentProductToContentStorageClientInterface
-     */
     public function getContentStorageClient(): ContentProductToContentStorageClientInterface
     {
         return $this->getProvidedDependency(ContentProductDependencyProvider::CLIENT_CONTENT_STORAGE);

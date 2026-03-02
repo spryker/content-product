@@ -23,10 +23,6 @@ class ContentProductAbstractListTypeMapper implements ContentProductAbstractList
      */
     protected $contentProductTermExecutors;
 
-    /**
-     * @param \Spryker\Client\ContentProduct\Dependency\Client\ContentProductToContentStorageClientInterface $contentStorageClient
-     * @param array $contentProductTermExecutors
-     */
     public function __construct(ContentProductToContentStorageClientInterface $contentStorageClient, array $contentProductTermExecutors)
     {
         $this->contentStorageClient = $contentStorageClient;

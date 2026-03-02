@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\ContentTypeContextTransfer;
 
 interface ContentProductTermExecutorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ContentTypeContextTransfer $contentTypeContextTransfer
-     *
-     * @return \Generated\Shared\Transfer\ContentProductAbstractListTypeTransfer
-     */
     public function execute(ContentTypeContextTransfer $contentTypeContextTransfer): ContentProductAbstractListTypeTransfer;
 }
