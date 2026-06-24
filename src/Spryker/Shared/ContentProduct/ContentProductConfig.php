@@ -12,6 +12,8 @@ use Spryker\Shared\Kernel\AbstractSharedConfig;
 class ContentProductConfig extends AbstractSharedConfig
 {
     /**
+     * @api
+     *
      * Content item abstract product list
      *
      * @var string
@@ -19,6 +21,8 @@ class ContentProductConfig extends AbstractSharedConfig
     public const CONTENT_TYPE_PRODUCT_ABSTRACT_LIST = 'Abstract Product List';
 
     /**
+     * @api
+     *
      * Content item abstract product list
      *
      * @var string
@@ -26,6 +30,8 @@ class ContentProductConfig extends AbstractSharedConfig
     public const CONTENT_TERM_PRODUCT_ABSTRACT_LIST = 'Abstract Product List';
 
     /**
+     * @api
+     *
      * Content item abstract product list function name
      *
      * @var string
@@ -33,6 +39,8 @@ class ContentProductConfig extends AbstractSharedConfig
     public const TWIG_FUNCTION_NAME = 'content_product_abstract_list';
 
     /**
+     * @api
+     *
      * Content item abstract product list bottom-title template identifier
      *
      * @var string
@@ -40,6 +48,8 @@ class ContentProductConfig extends AbstractSharedConfig
     public const WIDGET_TEMPLATE_IDENTIFIER_BOTTOM_TITLE = 'bottom-title';
 
     /**
+     * @api
+     *
      * Content item abstract product list top-title template identifier
      *
      * @var string
